@@ -1,0 +1,16 @@
+
+<% @restaurants.each do |restaurant| %>
+<div class="d-flex m-3 shadow-sm w-50">
+  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" width=250>
+  <div class="d-flex flex-column justify-content-between p-3">
+    <div>
+      <h2><%= restaurant.name %></h2>
+      <p><%= restaurant.category %></p>
+    </div>
+    <div>
+      <%= link_to 'details', restaurant_path(restaurant) %>
+    </div>
+  </div>
+</div>
+<% end %>
+

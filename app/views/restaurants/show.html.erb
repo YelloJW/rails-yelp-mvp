@@ -1,0 +1,13 @@
+<div class="container card-local shadow-sm mt-4 w-50">
+  <%= link_to 'back', restaurants_path(@restaurant) %>
+  <br>
+  <br>
+  <h1><%= @restaurant.name %></h1>
+  <hr>
+  <p>Address: <%= @restaurant.address %></p>
+  <p>Category: <%= @restaurant.category %></p>
+  <p>Phone number: <%= @restaurant.phone_number %></p>
+  <hr>
+  <%= render 'reviews', restaurant: @restaurant %>
+</div>
+

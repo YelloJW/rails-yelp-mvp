@@ -1,0 +1,13 @@
+<h2>Reviews</h2>
+<p><%= link_to 'add review', new_restaurant_review_path(restaurant) %></p>
+
+<% restaurant.reviews.each do |review| %>
+<div class="review py-1">
+  <h2><% review.rating.times do %>
+  <i class="icon fas fa-star"></i>
+  <% end %>
+  <p class="review-content"><%= review.content %></p>
+</div>
+<% end %>
+</div>
+
